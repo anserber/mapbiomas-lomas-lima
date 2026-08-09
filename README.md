@@ -13,9 +13,9 @@ tercera edición, categoría Joven.
 
 ```
 codigo/gee/          42 scripts de Google Earth Engine
-codigo/python/       31 scripts de Python
+codigo/python/       30 scripts de Python
 datos/               tabla maestra de las ocho unidades públicas y su diccionario
-metodologia/         metodología congelada v1.0, adenda v1.1 y 32 documentos de control
+metodologia/         metodología congelada v1.0, adenda v1.1 y 31 documentos de control
 ```
 
 **`datos/tabla_maestra_resultados_publicos_v2.csv`** es la fuente única de todas
@@ -55,6 +55,11 @@ analizados; los ocho restantes se publican íntegros.
 Algunos scripts conservan referencias a rutas locales del material restringido.
 Son rutas, no datos: los archivos a los que apuntan no forman parte de este
 repositorio.
+
+Dos archivos quedan fuera por regla explícita de `.gitignore`: el script que
+selecciona la muestra del ámbito restringido y su documento de control. Ambos
+describen cómo se trató la KBA y no son necesarios para reproducir ninguno de
+los resultados publicados, que se calculan sobre las ocho unidades públicas.
 
 **Tampoco se redistribuyen geometrías ni rásteres.** Los límites del ACR proceden
 del geoservicio oficial y los productos de MapBiomas de su plataforma; ambos se
