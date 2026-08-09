@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "Si utilizas este material, cítalo mediante su DOI de concepto en Zenodo."
+title: >-
+  ¿Qué puede y qué no puede decir una clase beta? Auditoría del comportamiento
+  de la clase 70 — Loma costera de MapBiomas Perú Colección 3 y diagnóstico de
+  persistencia cartográfica y presión urbana en el ACR Sistema de Lomas de Lima,
+  1985–2024
+abstract: >-
+  Código, datos y documentos de control del diagnóstico de la clase 70 — Loma
+  costera de MapBiomas Perú, Colección 3, sobre las ocho unidades públicas del
+  ACR Sistema de Lomas de Lima y su periferia externa. Incluye la tabla maestra
+  de resultados, su diccionario de campos, la metodología congelada con su
+  adenda y los documentos de control del procedimiento de doce pasos. No
+  contiene material relativo a la KBA Lomas de Atocongo, excluido por las
+  condiciones de uso del dato de origen.
+type: dataset
+authors:
+  - family-names: "Llanto Atoccsa"
+    given-names: "Jhoreck Miguel"
+    orcid: "https://orcid.org/0009-0002-2567-8195"
+    email: "llanto201617@gmail.com"
+  - family-names: "Castro"
+    given-names: "Jorge"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+keywords:
+  - MapBiomas
+  - lomas costeras
+  - teledetección
+  - persistencia cartográfica
+  - Google Earth Engine
+  - área de conservación regional
+  - Perú
+  - clase beta
+  - validación visual
+date-released: 2026-08-09

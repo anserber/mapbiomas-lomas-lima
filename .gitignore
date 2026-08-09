@@ -1,0 +1,17 @@
+# Nada del ámbito restringido puede subirse nunca.
+**/kba_restricted/**
+*atocongo*
+*_kba_*
+
+# Datos pesados y derivados que no forman parte del depósito
+*.tif
+*.gpkg
+*.shp
+*.shx
+*.dbf
+*.prj
+
+.DS_Store
+__pycache__/
+*.pyc
+node_modules/

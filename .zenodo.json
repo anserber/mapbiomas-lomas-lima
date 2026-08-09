@@ -1,0 +1,36 @@
+{
+  "title": "¿Qué puede y qué no puede decir una clase beta? Auditoría del comportamiento de la clase 70 — Loma costera de MapBiomas Perú Colección 3 y diagnóstico de persistencia cartográfica y presión urbana en el ACR Sistema de Lomas de Lima, 1985–2024",
+  "upload_type": "software",
+  "language": "spa",
+  "license": "MIT",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Llanto Atoccsa, Jhoreck Miguel",
+      "orcid": "0009-0002-2567-8195"
+    },
+    {
+      "name": "Castro, Jorge"
+    }
+  ],
+  "description": "<p>Código, datos y documentos de control del diagnóstico de la <strong>clase 70 &mdash; Loma costera</strong> de MapBiomas Perú, Colección 3, sobre las ocho unidades públicas del ACR Sistema de Lomas de Lima y su periferia externa, 1985&ndash;2024.</p><p>Incluye 42 scripts de Google Earth Engine, 31 scripts de Python, la tabla maestra de resultados públicos con su diccionario de campos, la metodología congelada v1.0 con su adenda v1.1, y 32 documentos de control del procedimiento de doce pasos. Los archivos de datos llevan firma SHA-256 registrada.</p><p><strong>Licencias:</strong> el código se publica bajo licencia MIT; los datos y los documentos, bajo Creative Commons Atribución 4.0 Internacional (CC BY 4.0).</p><p><strong>Exclusión declarada:</strong> no se incluye material relativo a la KBA Lomas de Atocongo &mdash;ni geometría, ni polígono de intersección, ni resultados desagregados&mdash; conforme a las condiciones de uso y redistribución con que la KBA Partnership entrega el dato de origen. La exclusión afecta a un ámbito de los nueve analizados; los ocho restantes se publican íntegros.</p><p><strong>Alcance:</strong> los resultados describen el comportamiento de una clase cartográfica en fase beta sobre un territorio delimitado. No describen condición ecológica, calidad de hábitat ni efectividad de conservación.</p><p>Este trabajo es un uso independiente de datos públicos y no constituye un producto institucional de MapBiomas Perú ni cuenta con su aval.</p>",
+  "keywords": [
+    "MapBiomas",
+    "lomas costeras",
+    "teledetección",
+    "persistencia cartográfica",
+    "Google Earth Engine",
+    "área de conservación regional",
+    "Perú",
+    "clase beta",
+    "validación visual",
+    "Landsat"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://plataforma.peru.mapbiomas.org/",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ]
+}
