@@ -155,13 +155,14 @@ PASOS = [
     ]),
     ("p12", C_PROCESO, "PASO 12 · Comunicación reproducible", [
         "12A Contratos de comunicación por producto",
-        "12B Figuras y tablas en Python sobre los CSV aprobados",
+        "12B Figuras analíticas y tablas automatizadas en Python",
         "12C Exportación de capas espaciales en GEE",
-        "12D Composición cartográfica",
+        "12D Composición de M00 en QGIS y de M01–M02 en Python",
         "12E Texto de resultados, pies de figura y manifiesto de fuentes",
     ]),
     ("pf", C_PRODUCTO, "PRODUCTOS PÚBLICOS", [
-        "Tabla maestra v2 y diccionario · 8 figuras · 3 tablas · 3 mapas",
+        "Tabla maestra v2 y diccionario · 7 figuras analíticas · 3 mapas",
+        "Tablas 5, 6 y 9 automatizadas · diagrama metodológico A1–A3",
         "Código de GEE y Python, protocolo y documentos de control",
         "Retroalimentación a MapBiomas Perú sobre la clase beta 70",
     ]),
@@ -212,7 +213,7 @@ DESCARTES = [
     ("d_modelo", "p10", "Paso 10.1 · Modelo 2050", [
         "Sin variable objetivo validada",
         "ni predictores defendibles.",
-        "No autorizados.",
+        "Análisis descartado.",
     ]),
     ("d_frag", "p10", "Paso 10.1 · Fragmentación", [
         "No calculadas ni validadas",

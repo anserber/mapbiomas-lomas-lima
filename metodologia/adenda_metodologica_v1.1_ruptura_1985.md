@@ -16,10 +16,9 @@ afectadas y el texto que las sustituye o complementa.
 > se calcularon incluyendo el residual de 1986, que necesita a 1985 como año
 > vecino. Al adoptarse la decisión de excluir 1985 de todo cálculo, el residual
 > de 1986 deja de ser calculable y el régimen I pasa a abarcar 1987-1999. Las
-> cifras vigentes son las de las tablas siguientes. El cambio refuerza el
-> hallazgo en lugar de debilitarlo: el régimen I resulta mucho más estable de lo
-> estimado, de modo que la inestabilidad no procede de la antigüedad de la serie
-> sino de la mezcla de sensores del régimen II.
+> cifras vigentes son las de las tablas siguientes. El régimen I resulta más
+> estable de lo estimado y la mayor volatilidad se concentra en el régimen II;
+> el diseño no permite atribuirla a una causa única.
 
 ## Modifica la sección 5 — Indicadores de estado de la clase 70
 
@@ -30,23 +29,25 @@ Se distingue entre dos ventanas:
 | Indicador | Ventana primaria | Justificación |
 |---|---|---|
 | Frecuencia, racha máxima, `siempre 70` | **1985–2024** (40 años) | El control 6E6-B midió una variación de 0.000 ha en las ocho unidades al excluir 1985. El indicador es insensible a la ruptura de inicio de serie |
-| `alguna vez 70` | **1986–2024** (39 años) | Excluir 1985 elimina los píxeles clasificados como clase 70 únicamente en ese año, que no se repiten en ningún año posterior |
-| Cualquier cálculo de cambio, tasa o línea base | **1986–2024** | 1985 subdetecta −29.3 % de la clase 70 del ACR |
+| `alguna vez clase 70` | **1986–2024** (39 años) | Excluir 1985 elimina los píxeles clasificados como clase 70 únicamente en ese año, que no se repiten en ningún año posterior |
+| Cualquier cálculo de cambio, tasa o línea base | **1986–2024** | 1985 subdetecta −29,3 % de la clase 70 del ACR |
 
-El valor de `alguna vez 70` con ventana 1985–2024 se conserva en la tabla
-maestra v2 como análisis de sensibilidad.
+El valor del indicador «alguna vez clase 70», calculado para la ventana
+1985–2024, se conserva en la tabla maestra v2 como análisis de sensibilidad.
 
-### Añade al final de la sección
+### Adición al final de la sección 5
 
-> El año 1985 no se utiliza como referencia de ninguna comparación temporal.
-> El mosaico oficial de ese año se construyó con 17 escenas Landsat sobre el
-> ACR y una nubosidad media del 58 %, ambos los peores valores de los 38 años
-> comparables de la serie. La superficie de clase 70 resultante es un 29.3 %
-> inferior a la meseta 1986–1990. La línea base del estudio es **1986**.
+> El año 1985 no se utiliza como referencia en las comparaciones temporales. El
+> mosaico oficial de ese año se construyó, para el ACR, con 17 escenas Landsat y
+> una nubosidad media del 58 %; estos valores corresponden, respectivamente, al
+> menor número de escenas y a la mayor nubosidad media entre los 38 años con
+> datos comparables. La superficie clasificada como clase 70 resultó un 29,3 %
+> inferior a la meseta observada entre 1986 y 1990. Por ello, se adoptó 1986
+> como línea base del estudio.
 
 ---
 
-## Modifica la sección 6.4 — Intercambios naturales y rupturas conocidas
+## Modificación de la sección 6.4 — Intercambios naturales y rupturas conocidas
 
 La lista de rupturas conocidas pasa de dos a tres entradas:
 
@@ -110,8 +111,10 @@ residual(t) = area70(t) - [ area70(t-1) + area70(t+1) ] / 2
 
 ### Reglas derivadas
 
-1. **Solo el tramo 2014–2024 sostiene lecturas interanuales.** Antes de 2014 la
-   volatilidad es de un orden de magnitud superior.
+1. **El régimen III (2014–2022) presenta la menor volatilidad medida.** En
+   comparación con este régimen, el régimen I es 3,3 veces más volátil y el
+   régimen II cerca de 12 veces más volátil. Los años 2023–2024 se analizan por
+   separado debido al cambio de versión del mosaico.
 2. Ninguna comparación entre años de regímenes distintos se presenta sin
    declarar esa condición.
 3. El régimen II concentra las mayores anomalías de la serie: los cinco
@@ -134,7 +137,7 @@ con etiqueta de satélite `ly`, y el conteo de escenas responde a otra
 convención, por lo que no es comparable con el de los años anteriores. El
 residual de 2023 es de +6.3 ha, de modo que el cambio **no produce un quiebre
 visible en la salida**. Se declara como discontinuidad de insumo dentro de la
-ventana de vigilancia reciente censurada (2021–2023).
+ventana de vigilancia reciente censurada (2021–2024).
 
 ---
 
@@ -145,13 +148,14 @@ proyecto:
 
 | Definición | Campo | Anillos disueltos |
 |---|---|---:|
-| Vectorial | `area_ref_ha` | 22 859.206 ha |
-| De grilla | `area_pixeles_ha` | 22 846.929 ha |
-| Clasificada | `clasificada_ha` | 22 839.847 ha |
+| Vectorial | `area_ref_vectorial_ha` | 22 859.206 ha |
+| De grilla | `area_grilla_ha` | 22 846.929 ha |
+| Clasificada | `area_clasificada_ha` | 22 839.847 ha |
 
 La diferencia entre las dos últimas es `sin_dato_ha` = 7.082 ha, concentrada en
 los anillos de 500–1 000 m (2.048 ha) y 1 000–2 000 m (5.035 ha). En los cinco
-ámbitos del ACR `sin_dato_ha` es 0.000 y las tres definiciones coinciden.
+ámbitos del ACR, `sin_dato_ha` es 0,000; por ello coinciden el área de grilla y
+el área clasificada. La superficie vectorial se informa por separado.
 
 > **Regla:** todas las tasas publicadas emplean la **superficie de grilla** como
 > denominador, por consistencia dimensional con numeradores expresados en
@@ -169,9 +173,10 @@ Se retira de los productos públicos el campo
 `tasa_presion_urbana_indicativa_por_1000ha`, que sumaba la tasa W5 confirmada y
 la tasa de censura reciente.
 
-Motivo: las dos señales tienen estatus epistémico y confianza distintos —E2 con
-confianza ALTA y E3 con confianza MEDIA— y el contrato de la figura F03 prohíbe
-sumarlas. Un campo publicado circula sin su diccionario. La suma es
+Motivo: las dos señales tienen estatus epistémico y niveles de confianza
+distintos —E2 con confianza ALTA y E3 con confianza MEDIA—, por lo que no deben
+sumarse ni presentarse como una única medida de presión urbana. Un campo
+publicado circula sin su diccionario. La suma es
 reproducible a partir de las dos columnas que permanecen publicadas, de modo
 que su retirada no elimina información.
 
@@ -180,6 +185,10 @@ La versión v1 de la tabla maestra conserva el registro histórico del campo.
 ---
 
 ## Resumen de cambios en los productos públicos
+
+Los identificadores F01 y F02 corresponden a códigos internos de los productos
+durante el desarrollo y se conservan para enlazar esta adenda con los archivos
+del repositorio.
 
 | Producto | Cambio |
 |---|---|

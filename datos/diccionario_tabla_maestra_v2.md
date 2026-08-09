@@ -47,8 +47,7 @@ La versión 1 no se sobrescribe y se conserva como registro histórico.
 - `area_ref_vectorial_ha`, `area_clasificada_ha`, `sin_dato_ha`: declaran de
   forma explícita las **tres definiciones de superficie** presentes en los datos
   del proyecto. La versión 1 publicaba solo la de grilla, mientras el dictamen
-  del Paso 10 empleaba la vectorial sin declararlo. Resuelve el hallazgo A1 de
-  la auditoría.
+  del Paso 10 empleaba la vectorial sin declararlo.
 - `area_70_1986_ha` y `area_70_1986_pct`: línea base del estudio, tras excluir
   1985 por ruptura de inicio de serie.
 - `area_alguna_vez70_1986_2024_ha` y su porcentaje: valor primario del
@@ -66,17 +65,14 @@ La versión 1 no se sobrescribe y se conserva como registro histórico.
 - **`tasa_presion_urbana_indicativa_por_1000ha`.** Era la suma aritmética de
   `tasa_w5_urbano_por_1000ha` y `tasa_censura_urbano_por_1000ha`.
 
-  Motivo de la retirada: las dos señales tienen estatus epistémico y confianza
-  distintos —E2 con confianza ALTA y E3 con confianza MEDIA— y el contrato de la
-  figura F03 prohíbe sumarlas. Un campo publicado circula separado de su
-  diccionario y puede citarse como presión confirmada. En Lomas de Amancaes el
-  valor era de 24.547 frente a 1.186 de presión W5 confirmada, con el 95 % del
-  total procedente de señal censurada.
+  Motivo de la retirada: las dos señales tienen estatus epistémico y niveles de
+  confianza distintos —E2 con confianza ALTA y E3 con confianza MEDIA—, por lo
+  que no deben sumarse ni presentarse como una única medida de presión urbana.
+  En Lomas de Amancaes el valor era de 24.547 frente a 1.186 de presión W5
+  confirmada, con el 95 % del total procedente de señal censurada.
 
   La retirada no elimina información: la suma es reproducible a partir de las
   dos columnas que permanecen publicadas. La versión 1 conserva el registro.
-
-  Resuelve el hallazgo A2 de la auditoría.
 
 ## Notas de uso
 
@@ -90,9 +86,10 @@ La versión 1 no se sobrescribe y se conserva como registro histórico.
 4. **El año 1985 no debe emplearse como referencia de ningún cálculo de cambio.**
    Es una ruptura cartográfica de inicio de serie documentada en
    `05_analisis_temporal/evidencia/dictamen_ruptura_1985_y_regimenes_sensor.md`.
-5. **Las lecturas interanuales solo son comparables dentro del tramo 2014–2024.**
-   La volatilidad de la clase 70 varía entre 129 y 11 ha según el régimen de
-   sensor del mosaico.
+5. **El régimen III (2014–2022) presenta la menor volatilidad medida.** En
+   comparación con este régimen, el régimen I es 3,3 veces más volátil y el
+   régimen II cerca de 12 veces más volátil. Los años 2023–2024 se analizan por
+   separado debido al cambio de versión del mosaico.
 6. Todas las tasas emplean `area_grilla_ha` como denominador.
 7. La KBA Lomas de Atocongo no aparece en esta tabla porque sus datos espaciales
    tienen condiciones de uso restringidas.
